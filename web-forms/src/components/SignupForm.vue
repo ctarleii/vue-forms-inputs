@@ -1,5 +1,4 @@
 <template>
-
     <form @submit.prevent="handleSubmit">
 
         <label>Email:</label>
@@ -47,6 +46,7 @@ export default {
             tempSkill: '',
             skills: [],
             passwordError: '',
+            showPassword: false
         }
     },
     methods: {
@@ -134,12 +134,19 @@ input[type="checkbox"] {
 }
 
 button {
-    background: #0b6dff;
-    border: 0;
+    background: white;
+    border: 2px solid #0b6dff;
     padding: 10px 20px;
     margin-top: 20px;
-    color: white;
+    color: #0b6dff;
     border-radius: 20px;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: #0b6dff;
+    color: white;
+    transition: .4s;
 }
 
 .submit {
